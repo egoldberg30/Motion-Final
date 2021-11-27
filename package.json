@@ -8,6 +8,8 @@
   "repository": {},
   "private": true,
   "dependencies": {
-    "gsap": "^3.7.1"
+    "greensock": "^1.20.2",
+    "gsap": "^3.7.1",
+    "gsap-plugin": "^5.0.8"
   }
 }
