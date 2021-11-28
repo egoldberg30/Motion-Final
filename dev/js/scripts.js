@@ -12,7 +12,7 @@ const mainTL = gsap.timeline();
 function LogoAnimation(){
     const tl = gsap.timeline();
 
-    tl.from ("#book",{duration: 1, y:"-=1000"});
+    tl.from ("#bookshape",{duration: 1, y:"-=1000"});
 }
 
 
