@@ -7,7 +7,7 @@
       "uuidString" : "8BC43299-527C-4C67-882B-DD99F41B2BE6"
     }
   ],
-  "creatorBuild" : "34214",
+  "creatorBuild" : "34264",
   "files" : {
     "\/.gitattributes" : {
       "cB" : 0,
@@ -47,6 +47,14 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/dev\/content\/logo.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/logo.html",
+      "oF" : 0
     },
     "\/dev\/global\/head.kit" : {
       "cB" : 0,
@@ -1456,6 +1464,9 @@
       },
       "no-unused-labels" : {
         "active" : 1
+      },
+      "no-unused-private-class-members" : {
+        "active" : 0
       },
       "no-unused-vars" : {
         "active" : 1,
