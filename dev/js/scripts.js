@@ -1,13 +1,18 @@
 import { gsap } from "gsap";
-// import {GSDevTools} from "gsap/GSDevTools";
-// import {MorphSVGPlugin} from "gsap/MorphSVGPlugin";
-// import {CustomEase} from "gsap/CustomEase";
+// import { GSDevTools } from "gsap/GSDevTools";
+// import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
+// import { CustomEase } from "gsap/CustomEase";
 
 // gsap.registerPlugin(GSDevTools, MorphSVGPlugin, CustomEase);
 // gsap.registerPlugin(MorphSVGPlugin, CustomEase);
 // gsap.registerPlugin(CustomEase);
 const mainTL = gsap.timeline();
 
+
+
+import { CustomEase } from "gsap/CustomEase";
+
+gsap.registerPlugin(CustomEase);
 
 
 
