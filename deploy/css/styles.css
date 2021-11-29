@@ -431,3 +431,7 @@ textarea {
 #logo_spreadout, #logo_regular {
   visibility: hidden;
 }
+
+#book_squashed, #book_mask_2 {
+  visibility: hidden;
+}
