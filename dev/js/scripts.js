@@ -15,8 +15,8 @@ function LogoAnimation(){
     const tl = gsap.timeline();
 
     tl.from ("#book",{duration: 1.3, y:"-=1000", ease: CustomEase.create("custom", "M0,0 C0.136,0.078 0.382,0.263 0.578,0.448 0.78,0.638 0.932,0.802 1,1 ")});
-    tl.to("#book", {morphSVG:"#book_squashed", duration: .25})
-    .to("#book", {morphSVG:"#book", duration: .2})
+    tl.to("#book", {morphSVG:"#book_squashed", duration: .35})
+    .to("#book", {morphSVG:"#book", duration: .27})
     .to("#book_mask_1", {morphSVG:"#book_mask_2", duration: .01})
     .to("#book",{duration: .5, y:"-=200"}, "logo_fill")
 
@@ -32,7 +32,9 @@ function LogoAnimation(){
     .from("#Path_L_Page4", {drawSVG: "0%", duration: .5}, "logo_fill")
     .from("#Path_L_Page3", {drawSVG: "0%", duration: .5}, "logo_fill")
     .from("#Path_L_Page2", {drawSVG: "0%", duration: .5}, "logo_fill")
-    .from("#Path_L_Page1", {drawSVG: "0%", duration: .5}, "logo_fill");
+    .from("#Path_L_Page1", {drawSVG: "0%", duration: .5}, "logo_fill")
+    
+    .from ("#type", {duration: 1.3, alpha: 1, y:"-=100", ease: "none"});
 
     return tl;
 }
