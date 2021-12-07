@@ -18,7 +18,7 @@ function LogoAnimation(){
     tl.to("#book", {morphSVG:"#book_squashed", duration: .35})
     .to("#book", {morphSVG:"#book", duration: .27})
     .to("#book_mask_1", {morphSVG:"#book_mask_2", duration: .01})
-    .to("#book",{duration: .5, y:"-=200"}, "logo_fill")
+    .to("#book",{duration: .5, y:"-=200"}, "logo_fill");
 
     tl.from("#Path_R_Page6", {drawSVG: "0%", transformOrigin:"0%", duration: .5}, "logo_fill")
     .from("#Path_R_Page5", {drawSVG: "0%", duration: .5}, "logo_fill")
