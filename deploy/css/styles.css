@@ -428,10 +428,26 @@ textarea {
 /* =============
     Footer
 ============= */
-#logo_regular, #logo_spreadout_solid {
+#MainDiv {
+  height: 100vh;
+  z-index: 12000;
+}
+#MainDiv #MainFrame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#MainDiv #MainFrame #logo_spreadout_solid, #MainDiv #MainFrame #R_Page6 {
   visibility: hidden;
 }
-
-#book_squashed, #book_mask_2 {
+#MainDiv #MainFrame #book_squashed, #MainDiv #MainFrame #book_mask_2 {
+  visibility: hidden;
+}
+#MainDiv #MainFrame #logo, #MainDiv #MainFrame #type_2, #MainDiv #MainFrame #type_3 {
+  visibility: hidden;
+}
+#MainDiv #MainFrame #typecover_0B, #MainDiv #MainFrame #typecover_0C, #MainDiv #MainFrame #typecover_0D, #MainDiv #MainFrame #typecover_0E, #MainDiv #MainFrame #typecover_0F, #MainDiv #MainFrame #typecover_0G, #MainDiv #MainFrame #typecover_1A, #MainDiv #MainFrame #typecover_1B, #MainDiv #MainFrame #typecover_1C, #MainDiv #MainFrame #typecover_1D, #MainDiv #MainFrame #typecover_1E, #MainDiv #MainFrame #typecover_2A, #MainDiv #MainFrame #typecover_2B, #MainDiv #MainFrame #typecover_2C, #MainDiv #MainFrame #typecover_2D, #MainDiv #MainFrame #typecover_2E, #MainDiv #MainFrame #typecover_2F, #MainDiv #MainFrame #typecover_2G, #MainDiv #MainFrame #typecover_3A, #MainDiv #MainFrame #typecover_3B, #MainDiv #MainFrame #typecover_3C, #MainDiv #MainFrame #typecover_3D, #MainDiv #MainFrame #typecover_3E {
   visibility: hidden;
 }

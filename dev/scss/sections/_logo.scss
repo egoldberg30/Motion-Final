@@ -1,28 +1,29 @@
-// #MainDiv{
-//     position: fixed;
-//     width: 100vw;
-//     height: 100vh;
-//     z-index: 12000;
+#MainDiv{
+    // position: fixed;
+    height: 100vh;
+    z-index: 12000;
     
-//     #MainFrame{
-//         // background-color: white;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         width: 100%;
-//         height: 100%;
-//     }
-// }
+    #MainFrame{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        
+        #logo_spreadout_solid, #R_Page6{
+            visibility:hidden;
+        }
+        
+        #book_squashed, #book_mask_2{
+            visibility:hidden;
+        }
 
+        #logo, #type_2, #type_3{
+            visibility:hidden;
+        }
 
-#logo_regular, #logo_spreadout_solid{
-    visibility:hidden;
-}
-
-// #Path_R_Page6, #Path_R_Page5, #Path_R_Page4, #Path_R_Page3, #Path_R_Page2, #Path_R_Page1, #Path_L_Page6, #Path_L_Page5, #Path_L_Page4, #Path_L_Page3, #Path_L_Page2, #Path_L_Page1{
-//     visibility:hidden;
-// }
-
-#book_squashed, #book_mask_2{
-    visibility:hidden;
+        #typecover_0B, #typecover_0C, #typecover_0D, #typecover_0E, #typecover_0F, #typecover_0G, #typecover_1A, #typecover_1B, #typecover_1C, #typecover_1D, #typecover_1E, #typecover_2A, #typecover_2B, #typecover_2C, #typecover_2D, #typecover_2E, #typecover_2F, #typecover_2G, #typecover_3A, #typecover_3B, #typecover_3C, #typecover_3D, #typecover_3E{
+            visibility:hidden;
+        }
+    }
 }
