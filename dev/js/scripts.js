@@ -57,6 +57,7 @@ function LogoAnimation(){
 
     .to("#typecover_0C", {autoAlpha:0, duration:0.01}, "+=.1")
     .to("#typecover_0D", {autoAlpha:0, duration:0.01}, "+=.1")
+    .to("#typecover_0E", {autoAlpha:0, duration:0.01}, "+=.1")
     .to("#typecover_0F", {autoAlpha:0, duration:0.01}, "+=.1")
     .to("#typecover_0G", {autoAlpha:0, duration:0.01}, "+=.1")
     .to("#typecover_1A", {autoAlpha:0, duration:0.01}, "+=.1")
