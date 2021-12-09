@@ -8,7 +8,6 @@ gsap.registerPlugin(GSDevTools, MorphSVGPlugin, CustomEase, DrawSVGPlugin);
 
 
 const mainTL = gsap.timeline();
-// gsap.set ("#book_elements", {y:"+25"});
 
 function BookBounce(){
     const tl = gsap.timeline();
@@ -56,7 +55,7 @@ function PagesSettle(){
     .to("#Solid_L_Page3", {morphSVG:"#regular_L_Page3", duration: 1.1}, "pagessettle")
     .to("#Solid_L_Page2", {morphSVG:"#regular_L_Page2", duration: 1.1}, "pagessettle")
     .to("#Solid_L_Page1", {morphSVG:"#regular_L_Page1", duration: 1.1}, "pagessettle");
-
+    
     // tl.from("#type_1_with_typecover", {duration: 1.1, autoAlpha:0, y:"+=15"}, "pagessettle");
     // tl.to("#R_Page6", {morphSVG:"#regular_R_Page6", duration: 1.1}, "pagessettle")
     // .to("#R_Page5", {morphSVG:"#regular_R_Page5", duration: 1.1}, "pagessettle")
@@ -132,4 +131,4 @@ mainTL.add(BookBounce())
 .add(PagesSettle(), "+=.4")
 .add(Typography());
 
-GSDevTools.create();
+// GSDevTools.create();
