@@ -6,69 +6,76 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
 gsap.registerPlugin(GSDevTools, MorphSVGPlugin, CustomEase, DrawSVGPlugin);
 
-// findShapeIndex("#R_Page5", "#regular_R_Page5");
 
 const mainTL = gsap.timeline();
+// gsap.set ("#book_elements", {y:"+25"});
 
-function LogoAnimation(){
+function BookBounce(){
     const tl = gsap.timeline();
-
     tl.from("#book",{duration: 1.3, y:"-=1000", ease: CustomEase.create("custom", "M0,0 C0.136,0.078 0.382,0.263 0.578,0.448 0.78,0.638 0.932,0.802 1,1 ")});
     tl.to("#book", {morphSVG:"#book_squashed", duration: .32})
-    .to("#book", {morphSVG:"#book", duration: .22, ease: "none"}, "sametime")
-    .to("#book_mask_1", {morphSVG:"#book_mask_2", duration: .01}, "sametime")
+    .to("#book", {morphSVG:"#book", duration: .22, ease: "none"})
+    .to("#book_mask_1", {morphSVG:"#book_mask_2", duration: .01})
     .to("#R_Page6", {autoAlpha:1, duration: 0.01})
     .to("#book",{duration: .6, y:"-=200"}, "-=0.03");
+    return tl;
+}
 
-    tl.from("#Path_R_Page6", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill", "-=1")
-    .from("#Path_R_Page5", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill", "-=1")
-    .from("#Path_R_Page4", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill", "-=1")
-    .from("#Path_R_Page3", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill", "-=1")
-    .from("#Path_R_Page2", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill", "-=1")
-    .from("#Path_R_Page1", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill", "-=1")
-    .from("#Path_L_Page6", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill", "-=1")
-    .from("#Path_L_Page5", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill", "-=1")
-    .from("#Path_L_Page4", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill", "-=1")
-    .from("#Path_L_Page3", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill", "-=1")
-    .from("#Path_L_Page2", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill", "-=1")
-    .from("#Path_L_Page1", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill", "-=1");
+function LogoFill(){
+    const tl = gsap.timeline();
+    tl.from("#Path_R_Page6", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill")
+    .from("#Path_R_Page5", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill")
+    .from("#Path_R_Page4", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill")
+    .from("#Path_R_Page3", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill")
+    .from("#Path_R_Page2", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill")
+    .from("#Path_R_Page1", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill")
+    .from("#Path_L_Page6", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill")
+    .from("#Path_L_Page5", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill")
+    .from("#Path_L_Page4", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill")
+    .from("#Path_L_Page3", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill")
+    .from("#Path_L_Page2", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill")
+    .from("#Path_L_Page1", {drawSVG: "0%", duration: .25, ease: "none"}, "logo_fill");
+    return tl;
+}
 
-
-
-    // tl.to("#logo_spreadout_solid", {autoAlpha:1, duration: 0.01}, "vectorswitcharoo")
-    // .to("#logo_spreadout_masks", {autoAlpha:0, duration: 0.01}, "vectorswitcharoo");
-
-    // tl.from("#type_1_with_typecover", {duration: 1.1, autoAlpha:0, y:"+=15"}, "pagessettle");
-    // tl.to("#Solid_R_Page6", {morphSVG:"#R_Page6", duration: 1.1}, "pagessettle")
-    // .to("#Solid_R_Page5", {morphSVG:"#R_Page5", duration: 1.1}, "pagessettle")
-    // .to("#Solid_R_Page4", {morphSVG:"#R_Page4", duration: 1.1}, "pagessettle")
-    // .to("#Solid_R_Page3", {morphSVG:"#R_Page3", duration: 1.1}, "pagessettle")
-    // .to("#Solid_R_Page2", {morphSVG:"#R_Page2", duration: 1.1}, "pagessettle")
-    // .to("#Solid_R_Page1", {morphSVG:"#R_Page1", duration: 1.1}, "pagessettle")
-    // .to("#Solid_L_Page6", {morphSVG:"#L_Page6", duration: 1.1}, "pagessettle")
-    // .to("#Solid_L_Page5", {morphSVG:"#L_Page5", duration: 1.1}, "pagessettle")
-    // .to("#Solid_L_Page4", {morphSVG:"#L_Page4", duration: 1.1}, "pagessettle")
-    // .to("#Solid_L_Page3", {morphSVG:"#L_Page3", duration: 1.1}, "pagessettle")
-    // .to("#Solid_L_Page2", {morphSVG:"#L_Page2", duration: 1.1}, "pagessettle")
-    // .to("#Solid_L_Page1", {morphSVG:"#L_Page1", duration: 1.1}, "pagessettle")
+function PagesSettle(){
+    const tl = gsap.timeline();
+    tl.to("#logo_spreadout_solid", {autoAlpha:1, duration: 0.01}, "vectorswitcharoo")
+    .to("#logo_spreadout_masks", {autoAlpha:0, duration: 0.01}, "vectorswitcharoo");
 
     tl.from("#type_1_with_typecover", {duration: 1.1, autoAlpha:0, y:"+=15"}, "pagessettle");
-    tl.to("#R_Page6", {morphSVG:"#regular_R_Page6", duration: 1.1}, "pagessettle")
-    .to("#R_Page5", {morphSVG:"#regular_R_Page5", duration: 1.1}, "pagessettle")
-    .to("#R_Page4", {morphSVG:"#regular_R_Page4", duration: 1.1}, "pagessettle")
-    .to("#R_Page3", {morphSVG:"#regular_R_Page3", duration: 1.1}, "pagessettle")
-    .to("#R_Page2", {morphSVG:"#regular_R_Page2", duration: 1.1}, "pagessettle")
-    .to("#R_Page1", {morphSVG:"#regular_R_Page1", duration: 1.1}, "pagessettle")
-    .to("#L_Page6", {morphSVG:"#regular_L_Page6", duration: 1.1}, "pagessettle")
-    .to("#L_Page5", {morphSVG:"#regular_L_Page5", duration: 1.1}, "pagessettle")
-    .to("#L_Page4", {morphSVG:"#regular_L_Page4", duration: 1.1}, "pagessettle")
-    .to("#L_Page3", {morphSVG:"#regular_L_Page3", duration: 1.1}, "pagessettle")
-    .to("#L_Page2", {morphSVG:"#regular_L_Page2", duration: 1.1}, "pagessettle")
-    .to("#L_Page1", {morphSVG:"#regular_L_Page1", duration: 1.1}, "pagessettle")
+    tl.to("#Solid_R_Page6", {morphSVG:"#regular_R_Page6", duration: 1.1}, "pagessettle")
+    .to("#Solid_R_Page5", {morphSVG:"#regular_R_Page5", duration: 1.1}, "pagessettle")
+    .to("#Solid_R_Page4", {morphSVG:"#regular_R_Page4", duration: 1.1}, "pagessettle")
+    .to("#Solid_R_Page3", {morphSVG:"#regular_R_Page3", duration: 1.1}, "pagessettle")
+    .to("#Solid_R_Page2", {morphSVG:"#regular_R_Page2", duration: 1.1}, "pagessettle")
+    .to("#Solid_R_Page1", {morphSVG:"#regular_R_Page1", duration: 1.1}, "pagessettle")
+    .to("#Solid_L_Page6", {morphSVG:"#regular_L_Page6", duration: 1.1}, "pagessettle")
+    .to("#Solid_L_Page5", {morphSVG:"#regular_L_Page5", duration: 1.1}, "pagessettle")
+    .to("#Solid_L_Page4", {morphSVG:"#regular_L_Page4", duration: 1.1}, "pagessettle")
+    .to("#Solid_L_Page3", {morphSVG:"#regular_L_Page3", duration: 1.1}, "pagessettle")
+    .to("#Solid_L_Page2", {morphSVG:"#regular_L_Page2", duration: 1.1}, "pagessettle")
+    .to("#Solid_L_Page1", {morphSVG:"#regular_L_Page1", duration: 1.1}, "pagessettle");
 
+    // tl.from("#type_1_with_typecover", {duration: 1.1, autoAlpha:0, y:"+=15"}, "pagessettle");
+    // tl.to("#R_Page6", {morphSVG:"#regular_R_Page6", duration: 1.1}, "pagessettle")
+    // .to("#R_Page5", {morphSVG:"#regular_R_Page5", duration: 1.1}, "pagessettle")
+    // .to("#R_Page4", {morphSVG:"#regular_R_Page4", duration: 1.1}, "pagessettle")
+    // .to("#R_Page3", {morphSVG:"#regular_R_Page3", duration: 1.1}, "pagessettle")
+    // .to("#R_Page2", {morphSVG:"#regular_R_Page2", duration: 1.1}, "pagessettle")
+    // .to("#R_Page1", {morphSVG:"#regular_R_Page1", duration: 1.1}, "pagessettle")
+    // .to("#L_Page6", {morphSVG:"#regular_L_Page6", duration: 1.1}, "pagessettle")
+    // .to("#L_Page5", {morphSVG:"#regular_L_Page5", duration: 1.1}, "pagessettle")
+    // .to("#L_Page4", {morphSVG:"#regular_L_Page4", duration: 1.1}, "pagessettle")
+    // .to("#L_Page3", {morphSVG:"#regular_L_Page3", duration: 1.1}, "pagessettle")
+    // .to("#L_Page2", {morphSVG:"#regular_L_Page2", duration: 1.1}, "pagessettle")
+    // .to("#L_Page1", {morphSVG:"#regular_L_Page1", duration: 1.1}, "pagessettle");
+    return tl;
+}
 
-
-    .to("#typecover_0C, #typecover_0D, #typecover_0E, #typecover_0F, #typecover_0G, #typecover_1A, #typecover_1B, #typecover_1C, #typecover_1D, #typecover_1E", {autoAlpha:1, duration:0.01}, "simultaneous1")
+function Typography(){
+    const tl = gsap.timeline();
+    tl.to("#typecover_0C, #typecover_0D, #typecover_0E, #typecover_0F, #typecover_0G, #typecover_1A, #typecover_1B, #typecover_1C, #typecover_1D, #typecover_1E", {autoAlpha:1, duration:0.01}, "simultaneous1")
     .to("#typecover_0A", {autoAlpha:0, duration:0.01}, "simultaneous1")
 
     .to("#typecover_0C", {autoAlpha:0, duration:0.01}, "+=.1")
@@ -120,6 +127,9 @@ function LogoAnimation(){
     return tl;
 }
 
-mainTL.add(LogoAnimation());
+mainTL.add(BookBounce())
+.add(LogoFill(), "-=.5")
+.add(PagesSettle(), "+=.4")
+.add(Typography());
 
 GSDevTools.create();
